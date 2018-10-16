@@ -2,7 +2,7 @@
 
 ## 勇者鬥 Vue 龍
 
-1. [前言]()
+1. [前言](01_Preface.md)
 1. [建立實體]()
 1. [模板語法]()
 1. [Computed Properties]()
