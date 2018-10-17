@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello Vue.js</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <!-- 7. Output View after rerender -->
+    <div id="app">
+        <p>{{message}}</p>  <!-- 6. Rerender View -->
+        <button v-on:click="getRemoteMessage">Inside Button</button>   <!-- 1. Click Button -->
+    </div>
+    <button onclick="clickButton()">Outside Button</button>   <!-- 1. Click Button -->
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: "This is local data.",
+            },
+            methods: {
+                getRemoteMessage() {    // 2. trigger event in Vue instance
+                    Promise.resolve("Get remote data by inside button.") // 3. Get data asynchronously
+                        .then((res) => {    // 4. Return result
+                            this.message = res; // 5. Change View Model
+                        });
+                },
+            },
+        });
+
+        function clickButton() {    // 2. trigger event in Vue instance
+            Promise.resolve("Get remote data by outside button.") // 3. Get data asynchronously
+                .then((res) => {    // 4. Return result
+                    vm.message = res; // 5. Change View Model
+                });
+        }
+    </script>
+</body>
+</html>
