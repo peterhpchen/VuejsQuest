@@ -164,7 +164,7 @@ var vm = new Vue({
 console.log(vm.$data.a); // 1
 ```
 
-> 像是 `$data` 這種有前綴 ``$` 的屬性是 Vue 實例所配置的，有前綴是為了跟使用者定義的屬性作區別，所有的 `$` 屬性可以在 [API 文件](https://vuejs.org/v2/api/#Instance-Properties)中找到。
+> 像是 `$data` 這種有前綴 `$` 的屬性是 Vue 實例所配置的，有前綴是為了跟使用者定義的屬性作區別，所有的 `$` 屬性可以在 [API 文件](https://vuejs.org/v2/api/#Instance-Properties)中找到。
 
 直接對修改 `$data` ， Vue 就會重新渲染畫面造成變化:
 
