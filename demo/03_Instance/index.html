@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instance</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        element: {{a}}
+        {{b}}
+        <button @click="add">add</button>
+    </div>
+    <div id="app2">
+        element: {{a}}
+    </div>
+    <div id="app3">
+        element: {{a}}
+    </div>
+    <script>
+        var vm = new Vue(
+            // Options
+            {
+                el: "#app",
+                data: {
+                    a: 1,
+                    b: 1
+                },
+                methods: {
+                  add() {
+                    this.a += 1;
+                  }    
+                }
+            }
+        );
+        
+        vm.$data.a = 2; // equal to vm.a = 2
+        vm.$watch('a', function (newValue, oldValue) {
+          this.b = oldValue;
+        });
+        
+        var vm2 = new Vue(
+            // Options
+            {
+                el: "#app2",
+                template: '<div class="template">template: {{a}}</div>',
+                data: {
+                    a: 1
+                },
+            }
+        );
+
+        var vm3 = new Vue(
+            // Options
+            {
+                el: "#app3",
+                render(h) {
+                    return h(
+                        'div',                         
+                        {
+                            'class': {
+                                render: true
+                            }
+                        },
+                        `render: ${this.a}`
+                    )
+                },
+                data: {
+                    a: 1
+                },
+            }
+        );
+    </script>
+</body>
+</html>
