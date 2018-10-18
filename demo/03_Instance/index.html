@@ -7,6 +7,8 @@
 <body>
     <div id="app">
         element: {{a}}
+        {{b}}
+        <button @click="add">add</button>
     </div>
     <div id="app2">
         element: {{a}}
@@ -20,11 +22,22 @@
             {
                 el: "#app",
                 data: {
-                    a: 1
+                    a: 1,
+                    b: 1
+                },
+                methods: {
+                  add() {
+                    this.a += 1;
+                  }    
                 }
             }
         );
-
+        
+        vm.$data.a = 2; // equal to vm.a = 2
+        vm.$watch('a', function (newValue, oldValue) {
+          this.b = oldValue;
+        });
+        
         var vm2 = new Vue(
             // Options
             {
