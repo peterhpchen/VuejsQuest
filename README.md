@@ -5,6 +5,7 @@
 1. [前言](01_Preface.md)
 1. [初探 Vue.js](02_FirstVue.md)
 1. [Vue 實例](03_Instance.md)
+1. [Vue 實體的生命週期](04_Lifecycle.md)
 1. [模板語法]()
 1. [Computed Properties]()
 1. [Watchers]()
