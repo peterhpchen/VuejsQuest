@@ -7,6 +7,7 @@
 1. [Vue 實例](03_Instance.md)
 1. [Vue 實體的生命週期](04_Lifecycle.md)
 1. [模板語法 Part 1 - Mustache 標籤](05_Mustache.md)
+1. [模板語法 Part 2 - Directives](06_Directives.md)
 1. Computed Properties
 1. Watchers
 1. 類型綁定
