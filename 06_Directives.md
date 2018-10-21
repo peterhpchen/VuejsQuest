@@ -201,6 +201,10 @@ var vm = new Vue({
 
 `v-on` 使用 `@` 當作簡寫。
 
+## Demo
+
+* [CodePen](https://codepen.io/peterhpchen/pen/jeKeBG)
+
 ## 小結
 
 這一章剛開始先介紹 Directives 它的功用以及如何設置，再來用不同的範例演示在不同情況下要使用的 Directives 有哪些，接著在統整出它的配置方式，使我們對 Directives 有個通盤的了解，最後介紹 Vue 為了開發者方便而釋出的縮寫方法。
