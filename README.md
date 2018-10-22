@@ -9,7 +9,7 @@
 1. [模板語法 Part 1 - Mustache 標籤](05_Mustache.md)
 1. [模板語法 Part 2 - Directives](06_Directives.md)
 1. [計算屬性](07_Computed.md)
-1. Watchers
+1. [監聽器( watch )](08_Watcher.md)
 1. 類型綁定
 1. 樣式綁定
 1. 條件渲染
