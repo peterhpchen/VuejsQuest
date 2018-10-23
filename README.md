@@ -10,6 +10,7 @@
 1. [模板語法 Part 2 - Directives](06_Directives.md)
 1. [計算屬性](07_Computed.md)
 1. [監聽器( watch )](08_Watcher.md)
+1. [計算屬性跟監聽器的比較](09_ComputedVSWatch.md)
 1. 類型綁定
 1. 樣式綁定
 1. 條件渲染
