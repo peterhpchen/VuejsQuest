@@ -11,7 +11,7 @@
 1. [計算屬性](07_Computed.md)
 1. [監聽器( watch )](08_Watcher.md)
 1. [計算屬性跟監聽器的比較](09_ComputedVSWatch.md)
-1. 類型綁定
+1. [Class 的綁定](10_Class.md)
 1. 樣式綁定
 1. 條件渲染
 1. 列表渲染
