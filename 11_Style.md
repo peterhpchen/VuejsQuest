@@ -4,13 +4,13 @@
 
 ## 字串綁定
 
-Style 是 Key Value 做為一組，單個 DOM 元素可以設置多個 Style，以 ; 區隔各個 Style ，像下面這樣:
+Style 是 Key Value 做為一組，單個 DOM 元素可以設置多個 Style，以 `;` 區隔各個 Style ，像下面這樣:
 
 ```html
 <span style="font-size:12px;font-weight:bold">Static Style</span>
 ```
 
-這是個靜態的 Style 設定，如果要利用實體中的資料變化 Style 可以綁定一個 Style 的字串:
+這是個靜態的 Style 設定，使用 Vue.js 後，可以利用實體中的資料，綁定 Style 的字串:
 
 ```js
 var vm = new Vue({
@@ -24,7 +24,7 @@ var vm = new Vue({
 <span :style="inlineStyle">Hello Style Binding</span>
 ```
 
-在 Vue 實體中可以修改 inlineStyle 的值，例如向下面的例子:
+在 Vue 實體中可以修改 `inlineStyle` 的值，例如向下面的例子:
 
 ```html
 <button @click="plusInlineFontSize">+</button>
@@ -32,7 +32,7 @@ var vm = new Vue({
 <span :style="inlineStyle">Hello Style Binding</span>
 ```
 
-可以多兩個按鈕，分別加跟減 Style 的字體大小，而 plusInlineFontSize 及 minusInlineFontSize 方法可以用下面的方法實作:
+這裡多兩個按鈕，分別為加跟減 Style 的字體大小，而 `plusInlineFontSize` 及 `minusInlineFontSize` 方法可以用下面的方法實作:
 
 ```js
 var vm = new Vue({
@@ -61,10 +61,10 @@ var vm = new Vue({
 
 這裡為了改變字體大小需要:
 
-* 以 ; 切開字串，取得各個 Style 。
-* 每個 Style 檢查是否是 font-size ，如果是，將數值取出來做加減。
+* 以 `;` 切開字串，取得各個 Style 。
+* 每個 Style 檢查是否是 `font-size` ，如果是，將數值取出來做加減。
 
-這樣的處理可以使字體大小變化，但這樣的處理已經脫離本來操作 Style 的單純動作，已經在處理字串的重組了。
+這樣的處理可以使字體大小變化，但這樣的處理脫離了本來操作 Style 的單純動作，已經是在處理字串的重組。
 
 ## 物件綁定
 
@@ -95,9 +95,9 @@ var vm = new Vue({
 </div> 
 ```
 
-這樣只要對 fontSize 做加減，字體就會變大變小了，跟之前字串綁定時的方法相比，是不是繼簡潔又易讀呢?
+這樣只要對 `fontSize` 做加減，字體就會變大變小了，跟之前字串綁定時的方法相比，是不是繼簡潔又易讀呢?
 
-> objStyle 物件中的 fontSize 及 fontWeight 在轉換為 Style 時會變為將大寫前面加上 - ，並轉大寫為小寫的 font-size 及 font-weight 以符合 css 的語法，所以在物件中可以放心寫一般物件的命名方式，當然要寫 css 的屬性名也是可以，使用引號括起來即可('' 、 "")。
+> `objStyle` 物件中的 `fontSize` 及 `fontWeight` 在轉換為 Style 時會變為將**大寫前面加上 `-`** ，並**轉大寫為小寫**， 像是 `font-size` 及 `font-weight` 來符合 CSS 的語法，所以在物件中可以放心寫一般物件的命名方式，當然要寫 CSS 的屬性名也是可以，使用引號括起來即可(例如 `'font-size'` 或是 `"font-size"`)。
 
 ## 陣列綁定
 
@@ -125,21 +125,21 @@ var vm = new Vue({
 
 ## 樣式前綴字自動補上
 
-使用 Vue.js 綁定 Style 時， Vue 會幫忙把 -webkit- 、 -moz- ... 等特定瀏覽器的特殊屬性所需的前綴字加上，就不需要自己寫上全部的前綴字了。
+使用 Vue.js 綁定 Style 時， Vue 會幫忙把 `-webkit-` 、 `-moz-` ... 等特定瀏覽器的特殊屬性所需的前綴字加上，就不需要自己寫上全部的前綴字了。
 
 ## 綁定多個屬性值
 
 而如果設定的 CSS 屬性在每個瀏覽器的值不同，在 Value 的地方可以使用陣列寫出不同瀏覽器上的屬性值， Vue.js 會從最後一個開始驗證是否可以用在目前的瀏覽器上，找到的話就用此屬性設定樣式。
 
-例如使用 flexbox 的時候可以像下面這樣設定:
+例如使用 `flexbox` 的時候可以像下面這樣設定:
 
 ```html
 <div v-bind:style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }"></div>
 ```
 
-當使用的瀏覽器可以使用 flexbox 的話，就會使用 flex ，要不然就會在往前找，找到符合的為止。
+當使用的瀏覽器可以使用 `flexbox` 的話，就會使用 `flex` ，要不然就會在往前找，找到符合的為止。
 
-> 可以把順序移動一下，例如說把 IE 專用 -ms-flexbox 放到最後的話，在 Chrome 開啟的時候依然會用 flex 渲染。
+> 可以把順序移動一下，例如說把 IE 專用 `-ms-flexbox` 放到最後的話，在 Chrome 開啟的時候依然會用 `flex` 渲染。
 
 ## Demo
 
