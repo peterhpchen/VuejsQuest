@@ -29,7 +29,7 @@ HTML 上的 `v-for` 值是以特殊的語法 `item in items` 設定，中間以 
 
 頁面上會如下圖顯示:
 
-![forstringarr](image\13_For\forstringarr.png)
+![forstringarr](image/13_For/forstringarr.png)
 
 上面的例子可以知道下面幾點:
 
@@ -58,7 +58,7 @@ var vm = new Vue({
 
 結果如下:
 
-![parent](image\13_For\parent.png)
+![parent](image/13_For/parent.png)
 
 頁面可以正常渲染。
 
@@ -105,7 +105,7 @@ var vm = new Vue({
 
 頁面結果如下:
 
-![index](image\13_For\index.png)
+![index](image/13_For/index.png)
 
 > `index` 是以 `0` 為起始值。
 
@@ -146,7 +146,7 @@ var vm = new Vue({
 
 `value` 會是每個屬性的 `value` : `Peter` 、 `Chen` 以及 `peter3598768` ，結果如下圖:
 
-![obj](image\13_For\obj.png)
+![obj](image/13_For/obj.png)
 
 ### 物件巡覽鍵值及 `index`
 
@@ -165,7 +165,7 @@ var vm = new Vue({
 
 結果如下:
 
-![objthreeargs](image\13_For\objthreeargs.png)
+![objthreeargs](image/13_For/objthreeargs.png)
 
 > 物件的巡覽是使用 `Object.keys()` ， 它不保證順序會跟原本的相同，例如 `Object.keys({2: 'two', 0: 'zero', 1: 'one' })` 出來的結果會是 `[ "0", "1", "2" ]` ，因此 `v-for` 不能保證其順序。
 
@@ -188,7 +188,7 @@ var vm = new Vue({
 
 渲染的結果如下:
 
-![range](image\13_For\range.PNG)
+![range](image/13_For/range.PNG)
 
 ## 使用 `key` 屬性決定復用行為
 
@@ -275,7 +275,7 @@ var vm = new Vue({
 
 結果會變為反序:
 
-![reverse](image\13_For\reverse.PNG)
+![reverse](image/13_For/reverse.PNG)
 
 使用計算屬性可以解決大部分的需求，但如果資料是需要巢狀使用 `v-for` 的話，計算屬性就派不上用場了，因為計算屬性只能設定實體中的資料屬性，這時我們可以使用方法來達成需求。
 
@@ -332,7 +332,7 @@ var vm = new Vue({
 
 頁面的結果如下:
 
-![nested](image\13_For\nested.PNG)
+![nested](image/13_For/nested.PNG)
 
 ## DEMO
 

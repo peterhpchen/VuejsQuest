@@ -153,7 +153,7 @@ var vm = new Vue({
 
 上面的例子中我們看到了幾個不同的配置方式:
 
-![fomula](image\06_Directives\formula.png)
+![fomula](image/06_Directives/formula.png)
 
 每個 Directives 的配置會有所不同，從最簡單只有 **Directive** 本身到加上 Argument 及 Modifier 的 **Directive:Argument.Modifier="Value"** 都有，下面會一一介紹。
 

@@ -8,7 +8,7 @@
 
 Vue.js 官方提供了下面的流程圖:
 
-![data](image\14_Reactivity\data.png)
+![data](image/14_Reactivity/data.png)
 
 這張圖分為了幾個部分:
 
