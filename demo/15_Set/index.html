@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Set</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <div>
+            a: {{a}}, b: {{b}}
+        </div>
+        <div>
+            first name: {{user.firstName}}, last name: {{user.lastName}}
+        </div>
+        <ul>
+            <li v-for="(value, key) in info">{{key}} : {{value}}</li>
+        </ul>
+        <ul>
+            <li v-for="item in arr">{{item}}</li>
+        </ul>
+    </div>
+    
+    <script>
+        var vm = new Vue(
+            {
+                el: "#app",
+                data: {
+                    a: 1, // reactive
+                    user: {
+                        firstName: 'Peter', // reactive
+                    },
+                    info: {
+                        firstName: 'Peter',
+                    },
+                    arr: [
+                        'a', 'b', 'c',
+                    ],
+                },
+                created() {
+                    this.b = 1; // not reactive
+                    
+                    // this.user.lastName = 'Chen'; // not reactive
+                    this.$set(this.user, 'lastName', 'Chen');
+
+                    // Object.assign(this.info, {lastName: 'Chen', account: 'peter3598768'}); // not reactive
+                    this.info = Object.assign({}, this.info, {lastName: 'Chen', account: 'peter3598768'});
+                }
+            }
+        );
+
+        // vm.arr[0] = 'd'; // not reactive
+        vm.$set(vm.arr, 0, 'd');
+
+        vm.arr = vm.arr.filter((item) => {return item !== 'c'});
+    </script>
+</body>
+</html>
