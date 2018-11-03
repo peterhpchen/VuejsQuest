@@ -34,13 +34,13 @@ var vm = new Vue(
 
 配置好之後，我們依序對 `a` 及 `b` 做加一的動作，得到的結果如下:
 
-![notreactivity](image\15_Set\notreactivity.PNG)
+![notreactivity](image/15_Set/notreactivity.PNG)
 
 在 `a` 做加一後，頁面會響應變化，可是輪到 `b` 的時候頁面卻不會刷新。
 
 這個原因在前面有提過，是因為之後設置的屬性不會有 getter 及 setter ，我們可以觀察實體來確認這件事，在 Console 鍵入 `vm` 可以看到實體中的屬性，你會發現實體中只有 `a` 的 `get` 及 `set` 方法。
 
-![instanceprop](image\15_Set\instanceprop.PNG)
+![instanceprop](image/15_Set/instanceprop.PNG)
 
 為了使新加入的屬性擁有 getter 及 setter ，我們要使用 `set` 方法。
 
@@ -81,7 +81,7 @@ var vm = new Vue(
 
 來看看是不是如此:
 
-![objnotreactivity](image\15_Set\objnotreactivity.PNG)
+![objnotreactivity](image/15_Set/objnotreactivity.PNG)
 
 就如上面所述的結果，並且在物件裡因為沒有實體中其他的屬性，我們可以更清楚的看出只有 `firstName` 有 `get` 及 `set` 方法，而 `lastName` 沒有。
 
@@ -115,7 +115,7 @@ var vm = new Vue(
 
 照之前在 Console 上的操作再操作一次，這次 `lastName` 可以響應在頁面上了。
 
-![reactivity](image\15_Set\reactivity.PNG)
+![reactivity](image/15_Set/reactivity.PNG)
 
 ## 物件新增多個屬性
 
@@ -171,7 +171,7 @@ var vm = new Vue(
 
 現在用 `vm.arr[0] = 'd'` 來修改第一個元素的值，結果如下:
 
-![arrnoreactivity](image\15_Set\arrnoreactivity.PNG)
+![arrnoreactivity](image/15_Set/arrnoreactivity.PNG)
 
 它並沒有響應在頁面上，這時就要藉由 `set` 將改變響應至畫面:
 
@@ -211,7 +211,7 @@ vm.arr = vm.arr.filter((item) => {return item !== 'c'});
 ## DEMO
 
 
-* [GitHub](demo\15_Set\index.html)
+* [GitHub](demo/15_Set/index.html)
 * [CodePen](https://codepen.io/peterhpchen/pen/wYZyZX)
 
 > 本文建議使用代碼自己跑起來， CodePen 上的 Console 功能陽春，沒辦法像 Chrome 有這麼多的細節。

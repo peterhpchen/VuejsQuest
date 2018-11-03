@@ -20,7 +20,7 @@
 1. [事件處理](16_Event.md)
 1. [`v-on` 的修飾符 Part 1 - 事件修飾符](17_EventModifier.md)
 1. [`v-on` 的修飾符 Part 2 - 按鍵修飾符](18_KeyModifier.md)
-1. 表單輸入綁定
+1. [表單綁定](19_FormInputBinding.md)
 1. 組件基礎
 1. 組件進階
 1. 動畫
