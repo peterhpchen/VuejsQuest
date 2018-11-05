@@ -134,7 +134,7 @@ var vm2 = new Vue({
 
 結果如下:
 
-![diff](image\22_ComponentRegistration\diff.PNG)
+![diff](image/22_ComponentRegistration/diff.PNG)
 
 可以看到因為 `app2` 沒有載入 `c` 區域組件，所以它不知道如何渲染 `c` 組件，就照原樣放在 HTML 上。
 
