@@ -88,7 +88,7 @@ Vue.component('component-number', {
 
 結果如下:
 
-![number](image\23_Props\number.PNG)
+![number](image/23_Props/number.PNG)
 
 ### 布林值
 
@@ -117,7 +117,7 @@ Vue.component('component-boolean', {
 
 結果如下:
 
-![boolean](image\23_Props\boolean.PNG)
+![boolean](image/23_Props/boolean.PNG)
 
 可以看到 `Female` 的類型因為是字串，所以造成判斷錯誤，這是容易犯的錯，要小心。
 
