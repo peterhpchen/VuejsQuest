@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Props Validation</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+      <component-all :name="name"
+                     :age="age"
+                     :love-coding="loveCoding"
+                     :habits="habits"
+                     :education="education"></component-all>
+    </div>
+    
+    <script>
+        function Education(university, highSchool) {
+            this.university = university;
+            this.highSchool = highSchool;
+        }
+        Vue.component('component-all', {
+          // props: ['name', 'age', 'loveCoding', 'habits', 'education'],
+          props: {
+            name: String,
+            age: {
+              type: Number,
+              required: true,
+              default: function() {
+                console.log(this.defaultAge);   // undefined
+                  // return this.defaultAge;
+                  return 18;
+              }, // 18,
+              validator: function (value) {
+                  console.log(this.maxAge); // undefined
+                  // return value >= 0 && value <= this.maxAge; 
+                  return value >= 0;
+              }
+            }, //[Number, String],
+            loveCoding: Boolean,
+            habits: Array,
+            education: Education
+          },
+          data: function() {
+              return {
+                  maxAge: 120
+              };
+          },
+          computed: {
+              defaultAge: function() {
+                  return this.maxAge / 5;
+              }
+          },
+          template: `
+            <div>
+              <div>Name : {{name}}</div>
+              <div>Age : {{age}}</div>
+              <div>Love coding : {{loveCoding ? 'Yes' : 'No'}}</div>
+              <div>Habits
+                <ul>
+                  <li v-for="habit in habits">{{habit}}</li>
+                </ul>
+              </div>
+              <div>University : {{education.university}}</div>
+              <div>High School : {{education.highSchool}}</div>
+            </div>
+          `,
+          created: function() {
+              console.log(this.age);
+          }
+        });
+
+        var vm = new Vue({
+          el: '#app',
+          data: {
+            name: true,
+            age: -1 ,// '十八', // 18,
+            loveCoding: 55,
+            habits: {
+                hello: 'bye',
+                hi: 'yo',
+            },
+            education: new Education('Vue University', 'Vue High School'), // ['vue', 'react'],
+            //   name: 'Peter Chen',
+            //   age: 81,
+            //   loveCoding: true,
+            //   habits: ['movie', 'coding', 'game'],
+            //   education: {
+            //     university: 'Vue University',
+            //     highSchool: 'Vue High School',
+            //   },
+          }
+        });
+    </script>
+</body>
+</html>
