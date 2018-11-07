@@ -262,6 +262,7 @@ computed: {
 
 ## DEMO
 
+* [GitHub](https://github.com/peterhpchen/VuejsQuest/blob/master/demo/24_PropsValidation/index.html)
 * [CodePen](https://codepen.io/peterhpchen/pen/ZmbbEQ)
 
 ## 結語
