@@ -26,7 +26,7 @@
 1. [組件註冊](22_ComponentRegistration.md)
 1. [`props` 屬性](23_Props.md)
 1. [屬性驗證](24_PropsValidation.md)
-1. 組件進階
+1. [屬性注意事項](25_PropsAttribute.md)
 1. 動畫
 1. Mixins
 1. 客製 directives
