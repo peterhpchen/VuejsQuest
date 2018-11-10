@@ -188,7 +188,7 @@ Vue.component('base-input-with-label', {
 
 > `$listeners` 跟 `$attrs` 搭配可以使客製組件上的設定跟原生的元素完全一樣，而不用去擔心組件中的模板配置。
 
-## .sync 修飾符
+## `.sync` 修飾符
 
 有時屬性也跟 `model` 一樣會需要做雙向綁定，這時可以用客製事件達成，在 Vue.js 中官方建議使用 `update:[屬性名]` 的事件叫用父組件更新屬性，如下例所示:
 

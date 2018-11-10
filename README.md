@@ -27,6 +27,7 @@
 1. [`props` 屬性](23_Props.md)
 1. [屬性驗證](24_PropsValidation.md)
 1. [屬性注意事項](25_PropsAttribute.md)
+1. [客製事件](26_CustomEvent.md)
 1. 動畫
 1. Mixins
 1. 客製 directives
