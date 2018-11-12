@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Async Component</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+      <async-component></async-component>
+      <async-component-base></async-component-base>
+      <async-component-promise></async-component-promise>
+    </div>
+    
+    <script>
+        const LoadingComponent = {
+          template: '<div>Loading...</div>'
+        };
+
+        const ErrorComponent = {
+          template: '<div>Error!!!</div>'
+        };
+
+        Vue.component('async-component', () => ({
+          component: new Promise((resolve, reject) => {
+            setTimeout(() => {
+        		resolve({
+                  template: '<div>Async Component</div>'
+                });
+                // reject('Error!!!');
+            }, 1000);
+          }),
+          loading: LoadingComponent,
+          error: ErrorComponent,
+          delay: 200,
+          timeout: 3000
+        }));
+
+        Vue.component('async-component-promise', () => new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve({
+              template: '<div>Async Component</div>'
+            });
+            // reject('Error!!!');
+          }, 1000);
+        }));
+
+        Vue.component('async-component-base', (resolve, reject) => {
+          setTimeout(() => {
+            resolve({
+              template: '<div>Async Component</div>'
+            });
+            // reject('Error!!!');
+          }, 1000);
+        });
+
+        var vm = new Vue({
+          el: '#app',
+          data: {
+            a: 1
+          }
+        });
+    </script>
+</body>
+</html>
