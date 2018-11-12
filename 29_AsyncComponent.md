@@ -48,7 +48,7 @@ Vue.component('async-component-base', (resolve, reject) => {
 
 過了一秒後可以在 `Console` 看到下面的訊息:
 
-![reject](image\29_AsyncComponent\reject.PNG)
+![reject](image/29_AsyncComponent/reject.PNG)
 
 它會輸出是在哪裡拋出 `reject` 以及錯誤訊息。
 
@@ -112,8 +112,10 @@ Vue.component('async-component', () => ({
 
 ## DEMO
 
-* [GitHub](demo\29_AsyncComponent\index.html)
+* [GitHub](https://github.com/peterhpchen/VuejsQuest/blob/master/demo/29_AsyncComponent/index.html)
 * [CodePen](https://codepen.io/peterhpchen/pen/GwNWdB)
+
+> 如果要嘗試 `reject` 函數的話不能使用 **CodePen** ，它會吃到警告訊息。
 
 ## 結語
 
