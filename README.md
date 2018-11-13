@@ -31,6 +31,7 @@
 1. [插槽](27_Slots.md)
 1. [動態組件](28_KeepAlive.md)
 1. [非同步組件](29_AsyncComponent.md)
+1. [結尾](30_End.md)
 1. 動畫
 1. Mixins
 1. 客製 directives
