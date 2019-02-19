@@ -101,7 +101,7 @@ var vm = new Vue({
 
 如此一來 `focus` 在輸入框時， `Console` 就會輸出 `focus` :
 
-![focus](../image/26_CustomEvent/focus.png)
+![focus](./image/26_CustomEvent/focus.png)
 
 但是如果是像下面這樣設定子組件:
 
@@ -224,7 +224,7 @@ var vm = new Vue({
 
 這樣我們就可在子組件中更新 `title` 的字串:
 
-![sync](../image/26_CustomEvent/sync.png)
+![sync](./image/26_CustomEvent/sync.png)
 
 點擊按鈕會將名稱反序。
 

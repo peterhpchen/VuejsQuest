@@ -15,7 +15,7 @@
 
 在 `input` 標籤中加入 `v-model` 屬性，上面綁定目標資料，這樣就可以從頁面上的輸入框更新資料，也可以藉由更新資料來改變輸入框內的內容(上例中可以用 `Clear` 按紐演繹)。
 
-![text](../image/19_FormInputBinding/text.png)
+![text](./image/19_FormInputBinding/text.png)
 
 ### Multiple Text
 
@@ -26,7 +26,7 @@
 <p style="white-space: pre-line">{{msgarea}}</p>/
 ```
 
-![multipletext](../image/19_FormInputBinding/multipletext.png)
+![multipletext](./image/19_FormInputBinding/multipletext.png)
 
 > 在 `textarea` 標籤內用 `{{}}` ，像是 `<textarea>{{message}}</textarea>` 是不能綁定資料的，請直接使用 `v-model` 綁定。
 
@@ -61,9 +61,9 @@
 </div>
 ```
 
-![withoutinput](../image/19_FormInputBinding/withoutinput.png)
+![withoutinput](./image/19_FormInputBinding/withoutinput.png)
 
-![ime](../image/19_FormInputBinding/ime.png)
+![ime](./image/19_FormInputBinding/ime.png)
 
 `msg` 是之前使用 `v-model` 綁定資料的例子，它不能及時響應 IME 的變化，但是使用 `input` 事件綁定的例子就可以在拼音時改變資料。
 
@@ -78,7 +78,7 @@
 <label for="checkbox">{{ checked }}</label>
 ```
 
-![checkbox](../image/19_FormInputBinding/checkbox.png)
+![checkbox](./image/19_FormInputBinding/checkbox.png)
 
 ### Multiple Checkbox
 
@@ -101,7 +101,7 @@
 </div>
 ```
 
-![multiplecheckbox](../image/19_FormInputBinding/multiplecheckbox.png)
+![multiplecheckbox](./image/19_FormInputBinding/multiplecheckbox.png)
 
 ### Radio
 
@@ -118,7 +118,7 @@
 </div>
 ```
 
-![radio](../image/19_FormInputBinding/radio.png)
+![radio](./image/19_FormInputBinding/radio.png)
 
 ### Select
 
@@ -137,7 +137,7 @@
 </div>
 ```
 
-![select](../image/19_FormInputBinding/select.png)
+![select](./image/19_FormInputBinding/select.png)
 
 > 如果初始值沒有符合任何的選項時， `select` 標籤會處於未選擇的狀態，也就是選項框中沒有任何值，在 IOS 下會有問題，因此最好的方法就是增加一個初始的選項，像是 `<option disabled value="">Please select one</option>` 來解決此問題。
 
@@ -157,7 +157,7 @@
 </div>
 ```
 
-![multipleselect](../image/19_FormInputBinding/multipleselect.png)
+![multipleselect](./image/19_FormInputBinding/multipleselect.png)
 
 > `selected` 、 `checked` 屬性在有設置 `v-model` 時都會失效，請直接使用 Vue 實體中的資料屬性設置初始值。
 
@@ -223,7 +223,7 @@ var vm2 = new Vue({
 
 > 瀏覽器不會送出未勾選的 `checkbox` 資料，所以如果一定要送出每個選擇的資料的話，可以改用 `radio` 。
 
-![checkboxvaluebinding](../image/19_FormInputBinding/checkboxvaluebinding.png)
+![checkboxvaluebinding](./image/19_FormInputBinding/checkboxvaluebinding.png)
 
 ### Radio
 
@@ -242,7 +242,7 @@ var vm2 = new Vue({
 
 我們使用了跟前例相同的 `yes` 、 `no` 資料，所以選擇第一個時 `model` 值會是 `hello` ，而選第二個時會是 `bye` 。
 
-![radiovaluebinding](../image/19_FormInputBinding/radiovaluebinding.png)
+![radiovaluebinding](./image/19_FormInputBinding/radiovaluebinding.png)
 
 ### Select
 
@@ -261,7 +261,7 @@ var vm2 = new Vue({
 </div>
 ```
 
-![selectvaluebinding](../image/19_FormInputBinding/selectvaluebinding.png)
+![selectvaluebinding](./image/19_FormInputBinding/selectvaluebinding.png)
 
 ## 修飾符
 
@@ -292,7 +292,7 @@ var vm2 = new Vue({
 
 可以先撥動第一個輸入框的數值， `{{typeof number}}` 會是 `number` ，之後撥動第二個輸入框，可以看到 `{{typeof number}}` 變為 `string` 。
 
-![number](../image/19_FormInputBinding/number.png)
+![number](./image/19_FormInputBinding/number.png)
 
 ### `.trim`
 
@@ -305,7 +305,7 @@ var vm2 = new Vue({
 
 可以輸入 `'  hello  '` ，然後在 `console` 印出 `trim` 的資料，可以看到輸出的資料為 `'hello'` 。
 
-![trim](../image/19_FormInputBinding/trim.png)
+![trim](./image/19_FormInputBinding/trim.png)
 
 ## Demo
 

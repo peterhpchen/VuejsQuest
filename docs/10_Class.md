@@ -33,7 +33,7 @@ var vm = new Vue({
 
 畫面如下:
 
-![inlineclassinitial](../image/09_Class/inlineclassinitial.png)
+![inlineclassinitial](./image/09_Class/inlineclassinitial.png)
 
 頁面確實有改變，因此代表 Class 有綁定到頁面上了。
 
@@ -79,7 +79,7 @@ changeColor() {
 
 我們可以看到按下按鈕後可以變化字體顏色:
 
-![inlineclasschange](../image/09_Class/inlineclasschange.png)
+![inlineclasschange](./image/09_Class/inlineclasschange.png)
 
 回來想想在 `changeColor` 方法中的代碼，要做多個處理才能改變 Class 的字串，這樣難懂又難寫，因此 Vue 很貼心地給了我們 Class 特別的綁定方式。
 

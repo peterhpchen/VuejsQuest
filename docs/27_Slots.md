@@ -204,7 +204,7 @@ var vm = new Vue({
 <base-title title="child content">Your title is {{title}}</base-title>
 ```
 
-![undefined](../image/27_Slots/undefined.png)
+![undefined](./image/27_Slots/undefined.png)
 
 由於 Slots 內的 scope 是父組件的，所以子組件的 `title` 資料是找不到的。
 

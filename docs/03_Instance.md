@@ -83,7 +83,7 @@ Vue 只有一個參數: `Options` ，這個參數是一個物件，設定這實�
 
 上面的代碼中，我們利用 `el` 屬性將 `id` 為 `app` 的 HTML 元素渲染為 Vue 的模板，因此在這元素的範圍內可以使用 Vue 的模板語法(例如: `{{a}}`)，而 `data` 的設定讓 `a` 的任何改變可以連動至畫面上，因此我們看到的畫面會被渲染為下面這樣:
 
-![Started Instance](../image/03_Instance/startedInstance.png)
+![Started Instance](./image/03_Instance/startedInstance.png)
 
 經過了 Vue 的處理，原本的頁面依照 `Options` 上的定義產生了變化。
 

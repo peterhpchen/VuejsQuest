@@ -48,7 +48,7 @@ Vue.component('async-component-base', (resolve, reject) => {
 
 過了一秒後可以在 `Console` 看到下面的訊息:
 
-![reject](../image/29_AsyncComponent/reject.png)
+![reject](./image/29_AsyncComponent/reject.png)
 
 它會輸出是在哪裡拋出 `reject` 以及錯誤訊息。
 

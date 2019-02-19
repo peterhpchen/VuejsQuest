@@ -47,7 +47,7 @@ var vm = new Vue({
 
 這樣我們就可以有三個計算按紐，它們都有自己的實體屬性，像是 `count` ，在每一個組件內都是各自獨立的，所以你按下按鈕所加的數字都只有這個組件本身。
 
-![multiplecomponent](../image/20_ComponentBasic/multiplecomponent.png)
+![multiplecomponent](./image/20_ComponentBasic/multiplecomponent.png)
 
 ## 組件與 `new Vue` 的差異
 
@@ -129,7 +129,7 @@ Vue.component('button-counter', {
 </div>
 ```
 
-![same](../image/20_ComponentBasic/same.png)
+![same](./image/20_ComponentBasic/same.png)
 
 因為所有的組件都共用同個 `buttonCounter2Data` 物件中的 `count` ，因此修改了其中一個組件的 `count` 資料，其他兩個也會一起更新。
 
@@ -193,7 +193,7 @@ Vue.component('button-counter', {
 
 利用設定 `<button-counter>` 內容，我們可以改變 `slot` ，因此按鈕會變為 `Hello Click Button`:
 
-![content](../image/20_ComponentBasic/content.png)
+![content](./image/20_ComponentBasic/content.png)
 
 > `<slot>` 標籤內的內容是預設值，所以當你的組件內容是空的時候(像是 `<button-counter></button-counter>` )會使用預設的 `Click` 字串渲染按紐。
 
@@ -227,7 +227,7 @@ Vue.component('button-counter', {
 
 因此在按下不同按紐時會依照不同的組件設定改變:
 
-![dynamic](../image/20_ComponentBasic/dynamic.png)
+![dynamic](./image/20_ComponentBasic/dynamic.png)
 
 ### HTML 元素配置限制
 
@@ -241,7 +241,7 @@ Vue.component('button-counter', {
 
 這時 `<my-row>` 會因為是錯誤的標籤而被抬升:
 
-![hoist](../image/20_ComponentBasic/hoist.png)
+![hoist](./image/20_ComponentBasic/hoist.png)
 
 可以看到 `<my-row>` 被抬到 `<table>` 外面了，為了防止這樣的問題，我們可以用 `is` 屬性在 `<tr>` 標籤上設定想要使用的組件，這樣就不會被判定為錯誤的標籤了:
 

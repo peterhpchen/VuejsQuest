@@ -186,7 +186,7 @@ var vm = new Vue({
 </div>
 ```
 
-![computedvsmethods](../image/07_Computed/computedvsmethods.gif)
+![computedvsmethods](./image/07_Computed/computedvsmethods.gif)
 
 可以看到 `datePlusNumberComputed` 因為在按了按鈕後並沒有任何跟此計算屬性有關的資料來源改變，所以它不會執行 Function 。
 

@@ -6,7 +6,7 @@ Vue.js 是處理 View Layer 的 Library ，使用 Vue.js 時，我們會操作 V
 
 下圖是一個 Vue.js 簡單的架構圖:
 
-![vue mvvm like](../image/02_FirstVue/vue-mvvm-like.png)
+![vue mvvm like](./image/02_FirstVue/vue-mvvm-like.png)
 
 * View : 透過 HTML 及模板語法渲染出來的畫面。
 * View Model : 使用 Vue.js 所建立起來的實體。

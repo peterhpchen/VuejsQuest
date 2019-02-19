@@ -2,7 +2,7 @@
 
 父組件及子組件由於屬於不同的實體，不能直接在一個組件上使用另一個組件的方法或是修改資料，而是必須要使用 `props` 屬性及 `$emit` 方法來進行溝通。
 
-![betweencomponent](../image/21_ComponentData/betweencomponent.png)
+![betweencomponent](./image/21_ComponentData/betweencomponent.png)
 
 子組件只要在 `props` 屬性加上需要由父組件傳入的參數定義，父組件就可以在配置子組件的時候給予子組件所需的參數屬性，而如果子組件因為變動需要通知父組件，就可以使用 `$emit` 通知父組件，而父組件只要設定相關事件的處理函數就可以接收到子組件的資料。
 
@@ -48,7 +48,7 @@ var vm = new Vue({
 
 接著我們可以看到結果如下圖:
 
-![props](../image/21_ComponentData/props.png)
+![props](./image/21_ComponentData/props.png)
 
 也可以使用 `v-bind` 綁定資料屬性:
 
@@ -68,7 +68,7 @@ var vm = new Vue({
 </div>
 ```
 
-![propbind](../image/21_ComponentData/propbind.png)
+![propbind](./image/21_ComponentData/propbind.png)
 
 ### 使用 `v-for` 帶入屬性
 
@@ -133,7 +133,7 @@ var vm = new Vue({
 
 這樣就可以完成設置了，結果如下圖:
 
-![for](../image/21_ComponentData/for.png)
+![for](./image/21_ComponentData/for.png)
 
 ### 減少傳入的屬性量
 

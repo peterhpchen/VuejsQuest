@@ -6,7 +6,7 @@
 
 官方製作了一張詳細的[生命週期鉤子函式示意圖](https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram):
 
-![Lifecyle](../image/04_Lifecycle/lifecycle.png)
+![Lifecyle](./image/04_Lifecycle/lifecycle.png)
 
 紅框白底的是各個鉤子函式的名稱，這些鉤子代表 Vue 實體的每個階段，分別的介紹如下:
 

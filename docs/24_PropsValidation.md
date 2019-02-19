@@ -26,7 +26,7 @@ props: {
 
 當使用了錯誤的類別後，在 Console 中會出現警告訊息:
 
-![wrongtype](../image/24_PropsValidation/wrongtype.png)
+![wrongtype](./image/24_PropsValidation/wrongtype.png)
 
 訊息中會告訴你錯誤的**屬性名稱**、**期望類別**跟**實際類別**，最後還會跟你說在哪個組件中發生這個問題，在開發及除錯時十分方便。
 
@@ -164,7 +164,7 @@ props: {
 
 會跳出下面的錯誤:
 
-![required](../image/24_PropsValidation/required.png)
+![required](./image/24_PropsValidation/required.png)
 
 ## 預設值
 
@@ -185,7 +185,7 @@ created: function() {
 
 這個值會直接當做這個屬性的值。
 
-![default](../image/24_PropsValidation/default.png)
+![default](./image/24_PropsValidation/default.png)
 
 右下角是 `created` 鉤子函數中的 `console.log` 輸出。
 
@@ -229,7 +229,7 @@ props: {
 
 將 `age` 設為 `-1` 會導致驗證未過， `Console` 會出下面的錯誤:
 
-![validator](../image/24_PropsValidation/validator.png)
+![validator](./image/24_PropsValidation/validator.png)
 
 ## 預設值或是驗證器中不能使用實體中的其他資料屬性
 

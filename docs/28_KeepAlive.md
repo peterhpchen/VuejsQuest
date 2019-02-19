@@ -123,7 +123,7 @@ Vue.component('high', {
 
 下圖是原本在 `high` ，然後切換到 `width` ，之後在切換回來的鉤子函數叫用的情形:
 
-![include](../image/28_KeepAlive/include.png)
+![include](./image/28_KeepAlive/include.png)
 
 可以看到 `width` 在切換回 `high` 時已經被銷毀了。
 
@@ -173,7 +173,7 @@ Vue.component('high', {
 
 我們加上一個 `weight` 組件，接著看看切換時會如何運作:
 
-![max](../image/28_KeepAlive/max.png)
+![max](./image/28_KeepAlive/max.png)
 
 依序按下 `Width` 及 `Weight` ，可以看到在按到 `Weight` 時因為組件數量超過 `2` ，所以在駐列中最前面(也就是最先被產生的)的 `high` 組件被銷毀了。
 

@@ -30,11 +30,11 @@ var vm = new Vue({
 
 結果如下截圖所示:
 
-![iftrue](../image/12_Conditional/iftrue.png)
+![iftrue](./image/12_Conditional/iftrue.png)
 
 當 `isA` 是 `true` 的時候， `<span>A</span>` 是有渲染在頁面上的，接著我們看看 `isA` 變為 `false` 後頁面會如何變化:
 
-![iffalse](../image/12_Conditional/iffalse.png)
+![iffalse](./image/12_Conditional/iffalse.png)
 
 在頁面上原本 `<span>A</span>` 的位置變為 `<!---->` ，由此可知當 `v-if` 的判斷不符合時，此元素不會被渲染在頁面上。
 
@@ -62,7 +62,7 @@ var vm = new Vue({
 
 來看看渲染的結果:
 
-![template](../image/12_Conditional/template.png)
+![template](./image/12_Conditional/template.png)
 
 可以看到 `v-if` 的功能運作正常，且 `<template>` 不會出現在渲染的結果上，因此不必擔心它影響元素的配置。
 
@@ -138,11 +138,11 @@ vue 的條件渲染非常的聰明，它會去判斷條件改變前及改變後�
 
 現在在輸入欄位中輸入 `I still here.` :
 
-![withoutkeya](../image/12_Conditional/withoutkeya.png)
+![withoutkeya](./image/12_Conditional/withoutkeya.png)
 
 接下來按下 `toggle A` 改變 `isA` 的值，畫面會變為:
 
-![withoutkeynota](../image/12_Conditional/withoutkeynota.png)
+![withoutkeynota](./image/12_Conditional/withoutkeynota.png)
 
 可以看到頁面上 `<input>` 已被渲染為 `name` 為 `notA` 的元素，但之前輸入的資料依然在輸入框上沒有被洗掉，因此可以看出 vue 並沒有消滅原本的 `<input>` 。
 

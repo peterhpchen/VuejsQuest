@@ -67,7 +67,7 @@ camelCase : <input v-model="camelCase">
 
 這樣的設定可以把父組件傳入的值都轉為 kabeb-case :
 
-![kababcase](../image/25_PropsAttribute/kababcase.png)
+![kababcase](./image/25_PropsAttribute/kababcase.png)
 
 遵守單向資料流原則會使組件的開發、除錯及測試變得更為單純，這是每個開發者都應該，也值得遵守的限制。
 

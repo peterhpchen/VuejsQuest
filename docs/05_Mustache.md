@@ -12,7 +12,7 @@
 
 而模板跟 Render Function 可以用下面的圖來說明:
 
-![template syntax](../image/05_Mustache/templatesyntax.png)
+![template syntax](./image/05_Mustache/templatesyntax.png)
 
 * 模板會經由 Compiler 編譯為 Render Function 。
 * Render Function 會因響應系統的觸發而重新渲染頁面 。
