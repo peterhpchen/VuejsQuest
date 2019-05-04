@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/peterhpchen/VuejsQuest#readme",
   "devDependencies": {
-    "vuepress": "^0.14.9"
+    "vuepress": "0.14.x"
   }
 }
