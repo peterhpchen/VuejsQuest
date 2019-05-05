@@ -1,7 +1,7 @@
 module.exports = {
   base: '/VuejsQuest/',
   title: '勇者鬥 Vue 龍',
-  description: '深入淺出 Vue.js',
+  description: 'Vue.js 學習之旅',
   head: [
     ['link', { rel: 'icon', href: '/logo.ico' }]
   ],
