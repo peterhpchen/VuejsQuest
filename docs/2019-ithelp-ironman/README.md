@@ -4,6 +4,10 @@
 
 > 🏆 榮獲 [2019 iT 邦幫忙鐵人賽 Modern Web 組冠軍](https://ithelp.ithome.com.tw/ironman/reward) 🏆
 
+## 版本
+
+Vue.js : **2.5.x**
+
 ## 目錄
 
 1. [前言](01_Preface.md)
