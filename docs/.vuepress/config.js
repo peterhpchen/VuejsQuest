@@ -7,10 +7,10 @@ module.exports = {
   ],
   themeConfig: {
     nav: [
-      { text: '2019 iT 邦幫忙鐵人賽', link: '/2019-ithelp-ironman/' }
+      { text: '基礎', link: '/basic/' }
     ],
     sidebar: {
-      '/2019-ithelp-ironman/': [
+      '/basic/': [
         '',
         '01_Preface',
         '02_FirstVue',
