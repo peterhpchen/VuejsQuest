@@ -6,6 +6,7 @@ module.exports = {
     ['link', { rel: 'icon', href: '/logo.ico' }]
   ],
   themeConfig: {
+    repo: 'peterhpchen/VuejsQuest',
     nav: [
       { text: '基礎', link: '/basic/' }
     ],
