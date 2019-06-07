@@ -44,7 +44,8 @@ module.exports = {
         '29_AsyncComponent',
         '30_End',
         '31_AccessOtherComponent',
-        '32_DependencyInjection'
+        '32_DependencyInjection',
+        '33_EventListeners'
       ]
     }
   }
