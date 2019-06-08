@@ -3,7 +3,7 @@ home: true
 heroImage: /hero.svg
 heroText: ⚔ 勇者鬥 Vue 龍 🐉
 actionText: 踏上旅程
-actionLink: /basic/
+actionLink: /basic/01_Preface
 features:
 - title: 聚焦 Core 庫
   details: 聚焦詳細講解 Vue.js Core 庫語法及使用方式，避免其他技術混亂讀者。

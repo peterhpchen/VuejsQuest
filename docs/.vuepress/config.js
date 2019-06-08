@@ -8,11 +8,11 @@ module.exports = {
   themeConfig: {
     repo: 'peterhpchen/VuejsQuest',
     nav: [
-      { text: '基礎', link: '/basic/' }
+      { text: '基礎', link: '/basic/01_Preface' }
     ],
     sidebar: {
       '/basic/': [
-        '',
+        // '',
         '01_Preface',
         '02_FirstVue',
         '03_Instance',
@@ -42,7 +42,7 @@ module.exports = {
         '27_Slots',
         '28_KeepAlive',
         '29_AsyncComponent',
-        '30_End',
+        // '30_End',
         '31_AccessOtherComponent',
         '32_DependencyInjection',
         '33_EventListeners'
