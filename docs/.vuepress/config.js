@@ -5,6 +5,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/logo.ico' }]
   ],
+  ga: 'UA-141751497-1',
   themeConfig: {
     repo: 'peterhpchen/VuejsQuest',
     nav: [
