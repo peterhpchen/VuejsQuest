@@ -66,18 +66,19 @@ Vue.js : **2.5.x**
 介紹元件的開發方式， Vue.js 可以將部分的畫面元素當作元件以達到重複使用的需求，使用元件開發可以減少大量重複的程式碼，也可以讓每個元件更專注在自己的目標上，藉由引入各種功能單一的元件來完成整個頁面的開發，完成這部分我們可以使用元件減少重複代碼，增加代碼再利用率。
 
 * [組件基礎](20_ComponentBasic.md) : 組件概念介紹
-* [組件間的資料傳輸](21_ComponentData.md) : 使用 props 屬性及 $emit 事件傳輸組件間的資料
+* [組件間的資料傳輸](21_ComponentData.md) : 使用 `props` 屬性及 `$emit` 事件傳輸組件間的資料
 * [組件註冊](22_ComponentRegistration.md) : 組件的全域及區域註冊
 * [`props` 屬性](23_Props.md) : 使用 `props` 屬性由上到下組件的資料傳輸
 * [屬性驗證](24_PropsValidation.md) : 屬性的各種驗證方式定義
-* [屬性注意事項](25_PropsAttribute.md) : 沒有定義在 props 屬性上的 DOM 屬性介紹
+* [屬性注意事項](25_PropsAttribute.md) : 沒有定義在 `props` 屬性上的 DOM 屬性介紹
 * [客製事件](26_CustomEvent.md) : 客製組件自己的事件
 * [插槽](27_Slots.md) : 在父組件中定義子組件內的內容
 * [動態組件](28_KeepAlive.md) : 不會被銷毀的組件定義
 * [非同步組件](29_AsyncComponent.md) : 組件的非同步定義方式
-* [尋訪其他組件](31_AccessOtherComponent.md) : 透過 $root, $parent, $children, $ref 等方法直接訪問其他組件
+* [尋訪其他組件](31_AccessOtherComponent.md) : 透過 `$root`, `$parent`, `$children`, `$ref` 等方法直接訪問其他組件
 * [依賴注入](32_DependencyInjection.md) : 在 Vue.js 中使用依賴注入減少組件間的依賴
 * [事件監聽器](33_EventListeners.md) : 使用方法增減事件監聽器
+* [模板定義](34_Template.md) : 使用 inline template 及 x-template 設定模板
 
 ### *進階* 🚧
 
