@@ -51,11 +51,11 @@ var vm = new Vue({
 * `beforeUpdate` 及 `updated` : `data` 改變後的重渲染。
 * `beforeDestroy` 及 `destroyed` : 銷毀實體。
 
-### beforeCreate 及 created
+### `beforeCreate` 及 `created`
 
 在設定中加上 `beforeCreate` 及 `created`:
 
-```js
+```js{6,12}
 var vm = new Vue({
   el: '#app',
   data: {
@@ -95,11 +95,11 @@ Hook: created
 
 > 所以在 `beforeCreate` 是不能操作實體中的物件的。
 
-### beforeMount 及 mounted
+### `beforeMount` 及 `mounted`
 
 設定中加入 `beforeMount` 及 `mounted` :
 
-```js
+```js{7,12}
 var vm = new Vue({
   el: '#app',
   data: {
@@ -137,16 +137,21 @@ Hook: mounted
 
 ```
 
+:::v-pre
+
 * `beforeMount` : 流程圖上有提到，在叫用 `beforeMount` 前 Vue 已經決定模板的樣式，所以在 `beforeMount` 中的 `$el` 已經有值了，只是它還未依照 Vue 實體上的定義所渲染，只是個初始設定的模板，因此可以看到 `{{a}}` 、 `v-on` 這些模板語法都還未被轉換。
+
+:::
+
 * `mounted` : 在 `mounted` 被叫用時已經把 Vue 實體上的定義綁定到元素上，所以這裡看到的是經由 Vue 渲染後的配置。
 
 > 所以在 `beforeMount` 前不能操作 DOM 元素。
 
-### beforeUpdate 及 updated
+### `beforeUpdate` 及 `updated`
 
 加上 `beforeUpdate` 及 `updated` 鉤子函數:
 
-```js
+```js{7,14}
 var vm = new Vue({
   el: '#app',
   data: {
@@ -171,7 +176,7 @@ var vm = new Vue({
 });
 ```
 
-然後在頁面上加顆按鈕來改變 a 的數值:
+然後在頁面上加顆按鈕來改變 `a` 的數值:
 
 ```html
 <div id="app">
@@ -202,13 +207,13 @@ Hook: updated
 * `beforeUpdate` : `a` 改變後觸發 `beforeUpdate` ，可以看到 `a` 已經變為 `2` 了，可是頁面上還是 `1` ，表示這時雖然 `data` 已經改變，可是還沒有重新渲染畫面。
 * `updated` : 完成重新渲染的作業後觸發，這時可以看到畫面已經將 `1` 改為 `2`了。
 
-> `updated` 時盡量避免修改 `data` ，這樣有可能再次觸發 `update` 造成無限循環，如果 `data` 要連動變化可以使用後面的章節會介紹的 [computed](https://vuejs.org/v2/guide/computed.html#Computed-Properties) 屬性。
+> `updated` 時盡量避免修改 `data` ，這樣有可能再次觸發 `update` 造成無限循環，如果 `data` 要連動變化可以使用[後面的章節](07_Computed.md)會介紹的 [computed](https://vuejs.org/v2/guide/computed.html#Computed-Properties) 屬性。
 
-### beforeDestroy 及 destroyed
+### `beforeDestroy` 及 `destroyed`
 
 加上 `beforeDestroy` 及 `destroyed` 的鉤子函數:
 
-```js
+```js{7,11}
 var vm = new Vue({
   el: '#app',
   data: {
@@ -251,7 +256,10 @@ Hook: destroyed
 
 ## Demo
 
-* [CodePan](https://codepen.io/peterhpchen/pen/oapdBg)
+<iframe height="265" style="width: 100%;" scrolling="no" title="Lifecyle" src="//codepen.io/peterhpchen/embed/oapdBg/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/peterhpchen/pen/oapdBg/'>Lifecyle</a> by Peter Chen
+  (<a href='https://codepen.io/peterhpchen'>@peterhpchen</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## 小結
 
