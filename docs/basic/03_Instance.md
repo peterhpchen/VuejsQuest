@@ -21,7 +21,7 @@ Root Instance
 
 而頁面配置會像是下面這樣:
 
-```html
+```html{3,8,9,14,15}
 <!-- Root Instance-->
 <div id="root">
     <TodoList />
@@ -97,7 +97,7 @@ Vue 只有一個參數: `Options` ，這個參數是一個物件，設定這實�
 
 1. 選項中有設置 `template` 時，使用 `template` 中的 html 取代原本元素上的配置:
 
-```js
+```js{5}
 var vm2 = new Vue(
     // Options
     {
@@ -110,9 +110,9 @@ var vm2 = new Vue(
 );
 ```
 
-2. 選項中有設置 `render` 函式時，使用 render function 配置模板:
+2. 選項中有設置 `render` 函式時，使用 Render Function 配置模板:
 
-```js
+```js{5}
 var vm3 = new Vue(
     // Options
     {
@@ -135,15 +135,20 @@ var vm3 = new Vue(
 );
 ```
 
-> render function 是屬於進階的用法，這裡知道有這樣的方式就好。
+> Render Function 是屬於進階的用法，這裡知道有這樣的方式就好。
 
 3. 選項中沒有設置 `template` 屬性，也沒有設置 `render` 函式時，使用原本頁面上的元素配置(同上節的例子)。
 
-> 在 `template` 屬性及 `render` 函式的配置下，原本元素的內容會被覆蓋，如果還想要繼續使用元素內的內容的話，可以使用 [Slots](https://vuejs.org/v2/guide/components-slots.html) ，後面的章節會詳細提到。
+> 在 `template` 屬性及 `render` 函式的配置下，原本元素的內容會被覆蓋，如果還想要繼續使用元素內的內容的話，可以使用 [Slots](https://vuejs.org/v2/guide/components-slots.html) ，[後面的章節](27_Slots.md)會詳細提到。
 
 上面就是綁定元素的方式，可以看到所有的方式都是在選項的定義上完成的，而定義可以是變數也可以是函式。
 
-可以配合 [Demo](https://codepen.io/peterhpchen/pen/qJVpwR/) 觀察各個 HTML 結構的差異。
+可以配合下面的 Demo 觀察各個 HTML 結構的差異。
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="Bind Element" src="//codepen.io/peterhpchen/embed/qJVpwR/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/peterhpchen/pen/qJVpwR/'>Bind Element</a> by Peter Chen
+  (<a href='https://codepen.io/peterhpchen'>@peterhpchen</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## 改變畫面
 
@@ -153,7 +158,7 @@ var vm3 = new Vue(
 
 `data` 可以從實例中的 `$data` 取得:
 
-```js
+```js{8}
 var vm = new Vue({
   ...
   data: {
@@ -204,7 +209,7 @@ var vm = new Vue({
 </div>
 ```
 
-```js
+```js{11}
 var vm = new Vue({
   ...
   data: {
@@ -224,7 +229,12 @@ vm.$watch('a', function (newValue, oldValue) {
 
 Vue 實體提供了 `$data` 這類的屬性供我們做設置及取得，同時也提供了像是 `$watch` 這樣的方法讓我們可以依需求使用。
 
-可以搭配 [Demo](https://codepen.io/peterhpchen/pen/LgONJB/) 實際操作。
+可以搭配 Demo 實際操作。
+
+<iframe height="265" style="width: 100%;" scrolling="no" title="Change Data" src="//codepen.io/peterhpchen/embed/LgONJB/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/peterhpchen/pen/LgONJB/'>Change Data</a> by Peter Chen
+  (<a href='https://codepen.io/peterhpchen'>@peterhpchen</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## 程式碼
 
