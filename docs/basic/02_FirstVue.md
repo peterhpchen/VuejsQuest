@@ -36,7 +36,7 @@ Vue.js 是處理 View Layer 的 Library ，使用 Vue.js 時，我們會操作 V
 
 引入 Vue 的方式有很多種，在一般的專案中通常都是使用 Webpack 來引入，但本系列文為了 Demo 方便，使用 `<script>` 元素來引入。
 
-```html
+```html{5}
 <!DOCTYPE html>
 <html>
 <head>
@@ -51,13 +51,13 @@ Vue.js 是處理 View Layer 的 Library ，使用 Vue.js 時，我們會操作 V
 
 這樣就引入了 Vue.js 庫了。
 
-> Vue.js 有分不同的版本: **Full** 及 **Runtime-only** ， Runtime-only 版本比 Full 少了 Compiler ，這是將模板編譯成 render function 的編譯器，因此如果只使用 Render Function 來渲染頁面的話可以只載入 Runtime-only 就好，在後面的章節會介紹 Render Function，那時候會做比較詳細的說明，而版本差別的詳細說明可以參考[官網的介紹](https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only)。
+> Vue.js 有分不同的版本: **Full** 及 **Runtime-only** ， Runtime-only 版本比 Full 少了 Compiler ，這是將模板編譯成 Render Function 的編譯器，因此如果只使用 Render Function 來渲染頁面的話可以只載入 Runtime-only 就好，在後面的章節會介紹 Render Function，那時候會做比較詳細的說明，而版本差別的詳細說明可以參考[官網的介紹](https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only)。
 
 ### 建立 Vue 實體
 
 接下來要建立 Vue 實體，就是上圖中間圓圈的部分， Vue 實體是整個 Vue.js 應用必備的物件，要建立 Vue 實體很簡單，如下程式碼:
 
-```html
+```html{10}
 <!DOCTYPE html>
 <html>
 <head>
@@ -76,9 +76,9 @@ Vue.js 是處理 View Layer 的 Library ，使用 Vue.js 時，我們會操作 V
 </html>
 ```
 
-`<script>` 中的 `new Vue({...})` 會建立 Vue 的實體，而 vm 變數取得的就是 Vue 實例化的物件。
+`<script>` 中的 `new Vue({...})` 會建立 Vue 的實體，而 `vm` 變數取得的就是 Vue 實例化的物件。
 
-> 通常 Vue 實例化物件會以 vm 當作其變數名稱，這也呼應了上面介紹: Vue 實例化物件在架構上代表著 View Model 層。
+> 通常 Vue 實例化物件會以 `vm` 當作其變數名稱，這也呼應了上面介紹: Vue 實例化物件在架構上代表著 View Model 層。
 
 Vue 的第一個參數是 [Options](https://vuejs.org/v2/api/index.html#Options-Data)，它用來登錄 Vue 實體所需的對象。
 
@@ -117,7 +117,7 @@ var vm = new Vue({
 * 初始一個 `message` 的畫面響應資料。
 * 定義一個 `getRemoteMessage` 方法，該方法會以非同步的方式取得資料，然後將取得的資料設置於 `message` 上。
 
-> 這裡直接使用 Promise.resolve 當作範例，實際上這裡可以用 AJAX 取得資料。
+> 這裡直接使用 `Promise.resolve` 當作範例，實際上這裡可以用 AJAX 取得資料。
 
 這樣就把 Vue 實例建立起來了。
 
@@ -131,7 +131,7 @@ var vm = new Vue({
 
 配置會像下面這樣:
 
-```html
+```html{8}
 <!DOCTYPE html>
 <html>
 <head>
@@ -150,10 +150,15 @@ var vm = new Vue({
 
 這裡有兩個 Vue 的模板語法:
 
+:::v-pre
+
 * `{{message}}` : 綁定 Vue 實例中的 `message` 資料。
+
+:::
+
 * `v-on:click` : 綁定 Vue 實例中的 `getRemoteMessage` 方法至 Click 事件中。
 
-如此一來我們就完成了所有的配置，當你按下按鈕後就會看到 `This is local data`. 變為 `Get remote data.` 了。
+如此一來我們就完成了所有的配置，當你按下按鈕後就會看到 `This is local data.` 變為 `Get remote data.` 了。
 
 ## 再進一步
 
@@ -173,7 +178,7 @@ var vm = new Vue({
 
 這裡可以使用 `vm` 變數， `vm` 變數就是 Vue 實例的物件，因此修改 `vm` 中的 `message` 也可以達到同樣的效果:
 
-```html
+```html{18}
 <div id="app">
     <p>{{message}}</p>
     ...
@@ -248,7 +253,10 @@ var vm = new Vue({
 
 ## Demo
 
-* [CodePen](https://codepen.io/peterhpchen/pen/vVXwOZ)
+<iframe height="265" style="width: 100%;" scrolling="no" title="First Vue" src="//codepen.io/peterhpchen/embed/vVXwOZ/?height=265&theme-id=0&default-tab=js,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/peterhpchen/pen/vVXwOZ/'>First Vue</a> by Peter Chen
+  (<a href='https://codepen.io/peterhpchen'>@peterhpchen</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## 程式碼
 
