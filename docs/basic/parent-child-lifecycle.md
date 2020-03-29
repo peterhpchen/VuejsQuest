@@ -375,6 +375,7 @@ Vue.component("child-three-component", {
 ```bash
 "child-component beforeUpdate"
 "child-component updated"
+```
 
 ```bash
 "child-two-component beforeUpdate"
