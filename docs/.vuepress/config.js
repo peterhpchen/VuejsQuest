@@ -47,7 +47,8 @@ module.exports = {
         '31_AccessOtherComponent',
         '32_DependencyInjection',
         '33_EventListeners',
-        '34_Template'
+        '34_Template',
+        'parent-child-lifecycle'
       ]
     }
   }
