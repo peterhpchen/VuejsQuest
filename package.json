@@ -7,10 +7,10 @@
     "docs:build": "vuepress build docs"
   },
   "engines": {
-    "node": ">=8.6"
+    "node": ">=10"
   },
   "devDependencies": {
-    "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
-    "vuepress": "1.5.2"
+    "@vuepress/plugin-google-analytics": "1.7.1",
+    "vuepress": "1.7.1"
   }
 }

@@ -5,7 +5,6 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/logo.ico' }]
   ],
-  ga: 'UA-141751497-1',
   themeConfig: {
     repo: 'peterhpchen/VuejsQuest',
     nav: [
@@ -51,5 +50,13 @@ module.exports = {
         'parent-child-lifecycle'
       ]
     }
-  }
+  },
+  plugins: [
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-141751497-1'
+      }
+    ]
+  ]
 }
